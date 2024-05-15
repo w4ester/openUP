@@ -1,0 +1,31 @@
+.venv
+__pycache__/
+wandb/
+*.py[cod]
+*$py.class
+venv
+.eggs
+.pytest_cache
+*.egg-info
+.DS_Store
+build
+eval/components
+eval/datasets
+!eval/datasets/eval.csv
+
+
+#openUP/backend/.gitignore
+#Explanation of Each Entry:
+#.venv: Ignore virtual environment directories.
+#__pycache__/: Ignore Python cache directories.
+#wandb/: Ignore the directory where Weights & Biases logs files.
+#*.py[cod]: Ignore compiled Python files (.pyc, .pyo, .pyd).
+#*$py.class: Ignore other Python-related class files.
+#venv: Ignore additional virtual environment directories.
+#.eggs: Ignore directories created by setuptools.
+#.pytest_cache: Ignore pytest cache directories.
+#*.egg-info: Ignore egg-info directories created by setuptools.
+#.DS_Store: Ignore macOS-specific files.
+#build: Ignore build directories.
+#eval/components: Ignore evaluation components directories.
+#eval/datasets: Ignore evaluation datasets directories, except for eval.csv which is explicitly included by !eval/datasets/eval.csv.
