@@ -1,0 +1,52 @@
+# flyctl launch added from .gitignore
+**/.venv
+**/__pycache__
+**/wandb
+**/*.py[cod]
+**/*$py.class
+**/venv
+**/.eggs
+**/.pytest_cache
+**/*.egg-info
+**/.DS_Store
+**/build
+
+# flyctl launch added from flexie/eval/.gitignore
+flexie/eval/**/wandb
+flexie/eval/**/datasets
+flexie/eval/**/components
+fly.toml
+
+
+#Explanation of Each Entry:
+#**/.venv: Ignore virtual environment directories at any level.
+#**/__pycache__: Ignore Python cache directories at any level.
+#**/wandb: Ignore Weights & Biases logs directories at any level.
+#**/*.py[cod]: Ignore compiled Python files (.pyc, .pyo, .pyd) at any level.
+#**/*$py.class: Ignore other Python-related class files at any level.
+#**/venv: Ignore additional virtual environment directories at any level.
+#**/.eggs: Ignore directories created by setuptools at any level.
+#**/.pytest_cache: Ignore pytest cache directories at any level.
+#**/*.egg-info: Ignore egg-info directories created by setuptools at any level.
+#**/.DS_Store: Ignore macOS-specific files at any level.
+#**/build: Ignore build directories at any level.
+#openui/eval/**/wandb: Ignore Weights & Biases logs directories within openui/eval.
+#openui/eval/**/datasets: Ignore datasets directories within openui/eval.
+#openui/eval/**/components: Ignore components directories within openui/eval.
+#fly.toml: Ignore fly.toml configuration file.
+
+#openUP/backend
+#├── .github/workflows
+#├── .vscode
+#├── flexie (was openui)
+#├── tests
+#├── .dockerignore (complete)
+#├── .gitignore (complete)
+#├── .python-version
+#├── Dockerfile (complete)
+#├── LICENSE
+#├── README.md (complete)
+#├── fly.toml
+#└── pyproject.toml (complete)
+
+  
