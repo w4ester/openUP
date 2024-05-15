@@ -1,10 +1,10 @@
 # Build the virtualenv as a separate step: Only re-execute this step when pyproject.toml changes
-#change openui to flexie
+#openui to openup
 FROM python:3.12-bookworm AS build-venv
 COPY pyproject.toml /build/pyproject.toml
 RUN python -m venv /venv && \
     /venv/bin/pip install --upgrade pip setuptools wheel && \
-    mkdir -p /build/flexie/util && touch /build/README.md
+    mkdir -p /build/openup/util && touch /build/README.md
 RUN /venv/bin/pip install --disable-pip-version-check /build
 
 # Copy the virtualenv into a distroless image
@@ -14,4 +14,4 @@ COPY --from=build-venv /venv /venv
 COPY . /app
 WORKDIR /app
 RUN pip install --no-deps -U /app
-ENTRYPOINT ["python", "-m", "flexie"]
+ENTRYPOINT ["python", "-m", "openup"]
