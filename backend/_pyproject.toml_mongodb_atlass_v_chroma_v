@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "flexie"
+name = "openup"
 version = "0.3.1"
 description = "A backend service for generating HTML components with Ollama or OpenAI models"
 authors = ["Will <your_email@example.com>", "Chris Van Pelt <author@example.com>"]
@@ -14,7 +14,7 @@ flask = "^2.0"
 requests = "^2.25.1"
 pydantic = "^1.8"
 gunicorn = "^20.0.4"
-weave = { git = "https://github.com/wandb/weave.git", branch = "fix/tiktoken-images" }
+weave = { git = "https://github.com/w4ester/weave.git", branch = "fix/tiktoken-images" }
 openai = "^1.12.0" #mayneed to comment out openai
 ollama = "^0.1.7"
 itsdangerous = "^2.0.1"
@@ -37,10 +37,10 @@ requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
 
 [project.urls]
-Homepage = "https://github.com/wandb/flexie"
-Changelog = "https://github.com/wandb/flexie/releases"
-Issues = "https://github.com/wandb/flexie/issues"
-CI = "https://github.com/wandb/flexie/actions"
+Homepage = "https://github.com/w4ester/openup"
+Changelog = "https://github.com/w4ester/openup/releases"
+Issues = "https://github.com/w4ester/openup/issues"
+CI = "https://github.com/w4ester/openup/actions"
 
 [project.optional-dependencies]
 eval = [
