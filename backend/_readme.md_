@@ -1,8 +1,8 @@
-# Flexie
+# openUP
 
-[![PyPI](https://img.shields.io/pypi/v/wandb-flexie.svg)](https://pypi.org/project/wandb-flexie/)
-[![Changelog](https://img.shields.io/github/v/release/wandb/flexie?include_prereleases&label=changelog)](https://github.com/wandb/flexie/releases)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/wandb/flexie/blob/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/w4ester-openup.svg)](https://pypi.org/project/w4ester-openup/)
+[![Changelog](https://img.shields.io/github/v/release/wandb/openup?include_prereleases&label=changelog)](https://github.com/w4ester/openup/releases)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/w4ester/openup/blob/main/LICENSE)
 
 A backend service for generating HTML components with AI
 
@@ -11,13 +11,13 @@ A backend service for generating HTML components with AI
 Clone this repo, then install using `pip`. You'll probably want to create a virtual env.
 
 ```bash
-git clone https://github.com/wandb/flexie
-cd flexie/backend
+git clone https://github.com/w4ester/openup
+cd openup/backend
 pip install .
 
 Usage
-To start the Flexie backend service, run:
-python -m flexie
+To start the openUP backend service, run:
+python -m openup
 
 
 Docker
@@ -25,8 +25,8 @@ You can build and run the Docker file from the /backend directory:
 
 bash
 Copy code
-docker build . -t wandb/flexie --load
-docker run -p 7878:7878 wandb/flexie
+docker build . -t w4ester/openup --load
+docker run -p 7878:7878 w4ester/openup
 
 
 Development
@@ -35,7 +35,7 @@ First be sure to install the package as editable, then passing --dev as an argum
 bash
 Copy code
 pip install -e .
-python -m flexie --dev
+python -m openup --dev
 
 
 Now install the dependencies and test dependencies:
@@ -53,4 +53,3 @@ pytest
 
 Evaluation
 The eval folder contains scripts for evaluating the performance of a model. It automates generating UI, taking screenshots of the UI, then asking gpt-4-vision-preview to rate the elements. More details about the eval pipeline coming soon...
-
