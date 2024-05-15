@@ -1,8 +1,12 @@
 [tool.poetry]
 name = "flexie"
-version = "0.1.0"
-description = "A flexible UI project"
-authors = ["Will <edinfinte>", "original_author <author@example.com>"]
+version = "0.3.1"
+description = "A backend service for generating HTML components with Ollama or OpenAI models"
+authors = ["Will <your_email@example.com>", "Chris Van Pelt <author@example.com>"]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+classifiers = ["License :: OSI Approved :: Apache Software License"]
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -10,14 +14,54 @@ flask = "^2.0"
 requests = "^2.25.1"
 pydantic = "^1.8"
 gunicorn = "^20.0.4"
+weave = { git = "https://github.com/wandb/weave.git", branch = "fix/tiktoken-images" }
+openai = "^1.12.0"
+ollama = "^0.1.7"
+itsdangerous = "^2.0.1"
+peewee = "^3.0.0"
+fastapi = "^0.108.0"
+uvicorn = "^0.25.0"
+fastapi-sso = "^0.13.0"
+boto3 = "^1.34.67"
+pymongo = "^3.11"  # Added for MongoDB Atlas support
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
 flake8 = "^3.9"
+pre-commit = "^2.0"  # Added from optional dependencies
 
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
+
+[project.urls]
+Homepage = "https://github.com/wandb/flexie"
+Changelog = "https://github.com/wandb/flexie/releases"
+Issues = "https://github.com/wandb/flexie/issues"
+CI = "https://github.com/wandb/flexie/actions"
+
+[project.optional-dependencies]
+eval = [
+    "Pillow>=8.3.1",
+    "playwright>=1.41.0",
+    "beautifulsoup4>=4.0.0",
+    "mistletoe>=1.0.0"
+]
+tui = ["textual[syntax]>=0.49.0", "pyperclip>=1.8.2"]
+
+
+
+#Explanation of Additional Dependencies:
+#weave: For managing data workflows.
+#openai: To interact with OpenAI's API.
+#ollama: To interact with Ollama's API.
+#itsdangerous: For secure data serialization.
+#peewee: A lightweight ORM for SQLite, MySQL, and PostgreSQL.
+#fastapi: A modern web framework for building APIs.
+#uvicorn: A lightning-fast ASGI server for serving FastAPI applications.
+#fastapi-sso: FastAPI extension for SSO authentication.
+#boto3: AWS SDK for Python.
+#pymongo: MongoDB driver for Python to interact with MongoDB Atlas.
 
 
 #Dependencies:
