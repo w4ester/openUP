@@ -27,11 +27,11 @@ def is_running_in_docker():
     return False
 
 if __name__ == "__main__":
-    ui = any([arg == "-i" for arg in sys.argv])
+    ui = any(arg == "-i" for arg in sys.argv)
     logger = setup_logger("/tmp/openui.log" if ui else None)
     logger.info("Starting OpenUI AI Server created by W&B...")
 
-    reload = any([arg == "--dev" for arg in sys.argv])
+    reload = any(arg == "--dev" for arg in sys.argv)
     if reload:
         config.ENV = config.Env.DEV
         logger.info("Running in dev mode")
