@@ -15,7 +15,7 @@ requests = "^2.25.1"
 pydantic = "^1.8"
 gunicorn = "^20.0.4"
 weave = { git = "https://github.com/wandb/weave.git", branch = "fix/tiktoken-images" }
-openai = "^1.12.0"
+openai = "^1.12.0" #mayneed to comment out openai
 ollama = "^0.1.7"
 itsdangerous = "^2.0.1"
 peewee = "^3.0.0"
@@ -23,7 +23,9 @@ fastapi = "^0.108.0"
 uvicorn = "^0.25.0"
 fastapi-sso = "^0.13.0"
 boto3 = "^1.34.67"
-pymongo = "^3.11"  # Added for MongoDB Atlas support
+#pymongo = "^3.11"  # Added for MongoDB Atlas support
+#optional for generating embeddings -->add<-- this - #sentence-transformers="^2.2.0"
+
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
@@ -133,4 +135,28 @@ tui = ["textual[syntax]>=0.49.0", "pyperclip>=1.8.2"]
 #[build-system]
 #requires = ["poetry>=0.12"]
 #build-backend = "poetry.masonry.api"
+
+
+
+
+
+#example code for generating embeddings with openai
+#import openai
+
+#openai.api_key = 'your_openai_api_key'
+
+#def generate_embedding(text):
+ #   response = openai.Embedding.create(
+  #      input=text,
+   #     model="text-embedding-ada-002"
+    #)
+    #return response['data'][0]['embedding']
+
+#example code for generating Embeddings iwth sentence transformers 
+#from sentence_transformers import SentenceTransformer
+
+#model = SentenceTransformer('all-MiniLM-L6-v2')
+
+#def generate_embedding(text):
+    #return model.encode(text).tolist()
 
