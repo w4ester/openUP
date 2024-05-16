@@ -5,7 +5,7 @@ openUP/backend
 ├── tests
 ├── .dockerignore (complete)
 ├── .gitignore (complete)
-├── .python-version
+├── .python-version (complete)
 ├── Dockerfile (complete)
 ├── LICENSE
 ├── README.md (complete)
