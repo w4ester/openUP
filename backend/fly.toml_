@@ -1,0 +1,31 @@
+# fly.toml app configuration file generated for openup on 2024-05-15-07:54
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file. Indeed.
+#
+
+app = 'openup'
+primary_region = 'sjc' #will change to east coast and update through oracle...
+
+[http_service]
+internal_port = 7878 #will change this
+force_https = true
+auto_stop_machines = true
+auto_start_machines = true
+min_machines_running = 0
+processes = ['app']
+
+[mounts]
+source = "openup_data"
+destination = "/root/.openup"
+
+[env]
+OPENUP_ENVIRONMENT = "production"
+OPENUP_HOST = "https://openup.fly.dev" #I setup an account with miko howdygreens and need to finish that later...to then deploy on fly. io
+GITHUB_CLIENT_ID = "GitHub ID" #need to change that later
+W4ESTER = "w4ester" #I think this works but will see.
+W4ESTER_PROJECT = "openup-hosted" #may need to change this also for fly. io
+
+[[vm]]
+memory = '1gb'
+cpu_kind = 'shared'
+cpus = 1 #I have no need to run gpu with my own internal server so most likely wont even end up using this but maybe fly. io
